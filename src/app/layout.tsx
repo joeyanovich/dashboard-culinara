@@ -21,14 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <body className={`${inter.className} bg-slate-200 flex flex-col min-h-screen`}>
         <div className="flex flex-1">
           <Sidebar />
-          <main className="flex-1 p-4">
+          <main className="flex-1">
             {children}
           </main>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

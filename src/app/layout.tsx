@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
-import { Footer } from "@/components/footer";
 
 const inter = Inter({
   weight: ['300', '400', '500', '600'],
@@ -21,7 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} bg-slate-200 flex flex-col min-h-screen`}>
         <div className="flex flex-1">
           <Sidebar />
@@ -29,7 +27,6 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        {/* <Footer /> */}
       </body>
     </html>
   );
